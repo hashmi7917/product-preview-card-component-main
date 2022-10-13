@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-greyish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --montserrat: "Montserrat", sans-serif;
+  --fraunces: "Fraunces", serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cream);
+}
+
+h1,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Card Size 600 x 450 */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content-image {
+  width: 100%;
+  max-width: 300px;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.content-image img {
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+.content-info {
+  width: 100%;
+  max-width: 300px;
+  padding: 2.5rem 1.5rem;
+  padding-left: 2.5rem;
+  background-color: var(--white);
+  border-radius: 0 10px 10px 0;
+}
+
+.content-info p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.content-info:nth-child(2) {
+  line-height: 1.6;
+  font-size: 1.4rem;
+  padding-left: 2.5rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+  font-family: var(--fraunces);
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 2rem 0;
+}
+
+p {
+  font-family: var(--montserrat);
+  font-weight: 500;
+  color: var(--dark-greyish-blue);
+}
+
+h4 {
+  font-family: var(--fraunces);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-cyan);
+  padding: 1.5rem 0.5rem;
+}
+
+h4 span {
+  font-size: 1.2rem;
+  font-family: var(--montserrat);
+  color: var(--dark-greyish-blue);
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+button {
+  width: 100%;
+  max-width: 235px;
+  padding: 15px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--montserrat);
+}
+
+button span img {
+  padding: 0 10px;
+}
+
+/* media queries */
+@media (max-width: 630px) {
+  .content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-image {
+    width: 100%;
+    max-width: 340px;
+    /* height: 50%; */
+    max-height: 250px;
+    /* min-height: 200px; */
+    background-image: url(./images/image-product-mobile.jpg);
+    object-fit: fill;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content-image img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .content-info {
+    width: 100%;
+    max-width: 345px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    width: 85%;
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+    font-family: var(--montserrat);
+    font-weight: 300;
+  }
+
+  h4 span {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--dark-greyish-blue);
+    font-family: var(--montserrat);
+    font-weight: 500;
+    padding-left: 15px;
+    padding-bottom: 5px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
