@@ -18,11 +18,21 @@
       <div class="container">
         <div class="content">
           <div class="content-image">
-            <img
-              src="./images/image-product-desktop.jpg"
-              alt="pefume bottle"
-              width="100%"
-            />
+            <picture>
+              <source
+                media="(max-width:1400px)"
+                srcset="./images/image-product-desktop.jpg"
+              />
+              <source
+                media="(max-width:450px)"
+                srcset="./images/image-product-mobile.jpg"
+              />
+              <img
+                src="./images/image-product-desktop.jpg"
+                alt="Flowers"
+                style="width: 100%"
+              />
+            </picture>
           </div>
           <div class="content-info">
             <p>perfume</p>
