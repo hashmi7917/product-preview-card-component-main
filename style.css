@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
 
-* {
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -45,6 +49,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .content-image {
@@ -52,6 +57,7 @@ p {
   max-width: 300px;
   background-size: cover;
   object-fit: cover;
+  max-height: 450px;
 }
 
 .content-image img {
@@ -62,10 +68,11 @@ p {
 .content-info {
   width: 100%;
   max-width: 300px;
-  padding: 2.5rem 1.5rem;
+  padding: 3.2rem 1.5rem;
   padding-left: 2.5rem;
   background-color: var(--white);
   border-radius: 0 10px 10px 0;
+  max-height: 450px;
 }
 
 .content-info p:first-child {
@@ -102,7 +109,7 @@ h4 {
   font-size: 3rem;
   font-weight: 700;
   color: var(--dark-cyan);
-  padding: 1.5rem 0.5rem;
+  padding: 1.1rem 0.5rem;
 }
 
 h4 span {
